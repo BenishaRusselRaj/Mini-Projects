@@ -1,3 +1,3 @@
 # Mini-Projects
 
--Pretty self-explanatory
+- Pretty self-explanatory
