@@ -1,6 +1,6 @@
 # Mini-Projects
 
-- All silly and small projects are maintained here.
+- Mini projects are maintained here.
 
 #### Roll-a-die
 - This project emulated the rolling of a die
