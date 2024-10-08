@@ -9,4 +9,4 @@
 
 #### Tic-tac-toe
 - Emulates the classic tic-tac-toe game.
-- Libraries used: tkinter
+- Libraries used: numpy, random
