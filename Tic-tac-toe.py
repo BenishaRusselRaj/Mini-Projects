@@ -2,11 +2,7 @@
 """
 Created on Tue Aug 27 15:52:40 2024
 
-@author: IITM
 """
-
-# import tkinter as tk
-# from tkinter import font
 
 import numpy as np
 import random
@@ -37,11 +33,11 @@ def get_place(board, pos_lib):
     print ("Current board:")
     print (board)
     print ("=" * len(board) * len(board) * 2)
-    print ('Select a Position to place:') # for now
-    x = random.choice(possibilities(board)) # for now
-    # x = input('Select a Position to place:')
-    return x # for now
-    # return pos_lib[x]
+    # print ('Select a Position to place:') # for now
+    # x = random.choice(possibilities(board)) # for now
+    x = input('Select a Position to place:')
+    # return x # for now
+    return pos_lib[x]
 
 def place_piece(board, pos, c_player, i):
     print ("Current board:")
@@ -97,9 +93,9 @@ def play_game():
     board, winner, state = create_board(), 0, 'draw'
     print(board)
 
-    print ("Choose your symbol[X/O]:")
-    player = 'X' # for now
-    # player = input ("Choose your symbol[X/O]:")
+    # print ("Choose your symbol[X/O]:")
+    # player = 'X' # for now
+    player = input ("Choose your symbol[X/O]:")
     player = player.upper()
     pos_lib = pos_dict(board)
     
