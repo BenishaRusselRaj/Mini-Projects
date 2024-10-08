@@ -2,7 +2,6 @@
 """
 Created on Tue Aug 27 12:11:18 2024
 
-@author: IITM
 """
 import random
 
