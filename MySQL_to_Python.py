@@ -30,11 +30,30 @@ try:
 except:
     pass
 
+#%%
+cursor.execute('ALTER TABLE studentDetails AUTO_INCREMENT = 1;')
+
+cursor.execute("INSERT INTO studentDetails(name, department, address) VALUES ('Uramichi','PE', 'Japan')" )
 
 #%%
-cursor.execute('ALTER TABLE studentDetails AUTO_INCREMENT = 100;')
+sqlStatement = 'INSERT INTO studentDetails (name, department, address) VALUES (%s, %s, %s)'
+values = [('Lawliet','EEE', 'Sweden'),
+          ('Marie','ME', 'Denmark'),
+          ('Holmes','CE', 'UK')]
 
-cursor.execute("INSERT INTO studentDetails(name, department, address) VALUES ('Johnny','ECE', 'Norway')" )
+cursor.executemany(sqlStatement, values)
+
+myDB.commit()
+
+print(cursor.rowcount, ' rows were inserted.')
 
 #%%
+
+cursor.execute("INSERT INTO studentDetails(name, department, address) VALUES ('Kita Shinsuke','PE', 'Japan')" )
+
+myDB.commit()
+
+print('1 record inserted. ID: ', cursor.lastrowid)
+
+
 
