@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 27 13:07:22 2025
 
+@author: IITM
+"""
 import mysql.connector
 
-myDB = mysql.connector.connect(host = 'localhost', user = '*****', 
-                               password = '*****', database = 'testdatabase')
+myDB = mysql.connector.connect(host = 'localhost', user = 'root', 
+                               password = 'root', database = 'testdatabase')
 
 print(myDB)
 
@@ -147,6 +151,52 @@ Output:
 [(1, 'Uramichi', 'PE', 'Japan', None), (5, 'Kita Shinsuke', 'PE', 'Japan', None)]
 """
 
+#%% to prevent SQL injection by escaping values in the sql query
+sql = "SELECT * FROM studentDetails WHERE department = %s;"
+val = ("PE", )
+
+cursor.execute(sql, val)
+
+x = cursor.fetchall()
+
+print(x)
+"""
+Output:
+[(1, 'Uramichi', 'PE', 'Japan', None),
+ (5, 'Kita Shinsuke', 'PE', 'Japan', None)]
+"""
+
 #%%
 
+cursor.execute('SELECT * FROM studentDetails ORDER BY address;')
 
+x = cursor.fetchall()
+
+print(x)
+
+"""
+Output:
+[(3, 'Marie', 'ME', 'Denmark', None),
+ (1, 'Uramichi', 'PE', 'Japan', None), 
+ (5, 'Kita Shinsuke', 'PE', 'Japan', None), 
+ (2, 'Lawliet', 'EEE', 'Sweden', None),
+ (4, 'Holmes', 'CE', 'UK', None)]
+    
+"""
+
+#%%
+cursor.execute("SELECT * FROM studentDetails ORDER BY address DESC;")
+
+x = cursor.fetchall()
+
+print(x)
+
+"""
+Output:
+[(4, 'Holmes', 'CE', 'UK', None), 
+ (2, 'Lawliet', 'EEE', 'Sweden', None), 
+ (1, 'Uramichi', 'PE', 'Japan', None), 
+ (5, 'Kita Shinsuke', 'PE', 'Japan', None), 
+ (3, 'Marie', 'ME', 'Denmark', None)]
+    
+"""
