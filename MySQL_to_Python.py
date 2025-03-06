@@ -200,3 +200,38 @@ Output:
  (3, 'Marie', 'ME', 'Denmark', None)]
     
 """
+#%% DELETE function
+
+cursor.execute("DELETE FROM studentDetails WHERE address = 'japan';")
+
+myDB.commit()
+
+print(cursor.rowcount, 'record(s) deleted.')
+
+"""
+Output:
+    2 record(s) deleted.
+"""
+
+#%% Another way: to prevent sql injections
+
+sql = 'DELETE FROM studentDetails WHERE address = "%s";'
+val = ['Japan']
+
+cursor.execute(sql, val)
+
+myDB.commit()
+
+print(cursor.rowcount, 'record(s) deleted.')
+
+"""
+To note:
+    when passed val = ('Japan'), this error was thrown:
+    ProgrammingError: Could not process parameters: str(Japan), 
+    it must be of type list, tuple or dict
+    
+    According to the tutorial, it was val = ('Japan',)
+    
+Output:
+    0 record(s) deleted.
+"""
