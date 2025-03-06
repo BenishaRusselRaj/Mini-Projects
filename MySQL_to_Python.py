@@ -1,13 +1,9 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Feb 27 13:07:22 2025
 
-@author: IITM
-"""
 import mysql.connector
 
-myDB = mysql.connector.connect(host = 'localhost', user = 'root', 
-                               password = 'root', database = 'testdatabase')
+myDB = mysql.connector.connect(host = 'localhost', user = '*****', 
+                               password = '*****', database = 'testdatabase')
 
 print(myDB)
 
