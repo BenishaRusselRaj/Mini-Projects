@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri May 16 14:51:06 2025
 
-@author: IITM
-"""
 import numpy as np
 
 
