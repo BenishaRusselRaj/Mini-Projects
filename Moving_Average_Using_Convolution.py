@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
-
+import sys
 
 #%%
 def Moving_Average(inputArray, size, weight):
@@ -18,7 +18,7 @@ try:
     valueWeight = 1/windowSize
 except:
     print ("Enter a valid window size!")
-    exit(1)
+    sys.exit(1)
 
 x = np.array([5, 2, 3, 8, 1])
 
