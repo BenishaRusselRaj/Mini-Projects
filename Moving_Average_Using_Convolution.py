@@ -16,9 +16,13 @@ def Moving_Average(inputArray, size, weight):
     return np.convolve(x, y)
 
 #%%
-windowSize = 3
+windowSize = input("Enter the window size:")
 
-valueWeight = 1/windowSize
+try:
+    valueWeight = 1/windowSize
+except:
+    print ("Enter a valid window size!")
+    exit(1)
 
 x = np.array([5, 2, 3, 8, 1])
 
