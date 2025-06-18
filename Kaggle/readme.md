@@ -1,4 +1,4 @@
-## All kaggle dataset analysis will be uploaded here
+## All kaggle dataset analysis are uploaded here
 
 #### 1. Lung Cancer Trends Dataset
 
