@@ -1,6 +1,6 @@
-# Mini-Projects
+# Training Lessons
 
-- Mini projects are maintained here.
+- Very small training level codes are maintained here.
 
 #### Roll-a-die
 - This project emulates the rolling of a die
