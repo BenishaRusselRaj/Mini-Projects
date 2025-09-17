@@ -1,11 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 17 12:12:00 2025
 
-@author: CBEEV
-"""
-
-file = open(r"C:\Users\CBEEV\Downloads\rosalind_revc (1).txt")
+file = open(r"*\rosalind_revc (1).txt")
 
 dna_string_data = file.read()
 
@@ -23,4 +18,5 @@ for i in dna_string_data[::-1]:
     else:
         output_string += ''
         
+
 print(output_string)
